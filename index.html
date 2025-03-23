@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MinEmb</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>MinEmb v1.0</h1>
+            <p>Combine and minify HTML, CSS, and JS into one file</p>
+        </header>
+        
+        <div class="upload-container">
+            <div class="file-upload-section">
+                <div class="file-upload" id="html-upload">
+                    <label for="html-file">HTML</label>
+                    <input type="file" id="html-file" accept=".html,.htm">
+                    <label for="html-file" class="custom-file-btn">Choose HTML File</label>
+                    <div class="file-info" id="html-file-info">No file selected</div>
+                </div>
+                
+                <div class="file-upload" id="css-upload">
+                    <label for="css-file">CSS</label>
+                    <input type="file" id="css-file" accept=".css">
+                    <label for="css-file" class="custom-file-btn">Choose CSS File</label>
+                    <div class="file-info" id="css-file-info">No file selected</div>
+                </div>
+                
+                <div class="file-upload" id="js-upload">
+                    <label for="js-file">JavaScript</label>
+                    <input type="file" id="js-file" accept=".js">
+                    <label for="js-file" class="custom-file-btn">Choose JS File</label>
+                    <div class="file-info" id="js-file-info">No file selected</div>
+                </div>
+            </div>
+            
+            <button id="process-btn" class="primary-button">Combine & Minify</button>
+        </div>
+        
+        <div class="result-container hidden" id="result-section">
+            <h2>Result</h2>
+            
+            <div class="stats-container" id="stats-container">
+                <div class="stat-box">
+                    <h3>Original</h3>
+                    <div class="value" id="original-size">0 KB</div>
+                </div>
+                <div class="stat-box">
+                    <h3>Minified</h3>
+                    <div class="value" id="minified-size">0 KB</div>
+                </div>
+                <div class="stat-box">
+                    <h3>Saved</h3>
+                    <div class="value" id="size-reduction">0%</div>
+                </div>
+            </div>
+            
+            <div class="actions">
+                <button id="copy-btn" class="secondary-button">Copy</button>
+                <button id="download-btn" class="secondary-button">Download</button>
+            </div>
+            <pre id="result-code"></pre>
+        </div>
+    </div>
+    <footer>
+        <p>Made by <a href="https://github.com/jaylikesbunda" style="color: white;">Jay Candel</a></p>
+    </footer>
+    
+    <script src="minifier.js"></script>
+</body>
+</html> 
